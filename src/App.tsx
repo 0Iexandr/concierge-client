@@ -1,9 +1,14 @@
-function App() {
+import Layout from './layout/Layout';
+// import About from './views/About';
+import Hero from './views/Hero';
+
+const App = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <h1 className="text-4xl">HI FROM EMPTY TEMPLATE</h1>
-    </div>
+    <Layout>
+      <Hero />
+      {/* <About /> */}
+    </Layout>
   );
-}
+};
 
 export default App;

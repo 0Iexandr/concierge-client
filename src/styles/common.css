@@ -1,0 +1,7 @@
+.section__title {
+  @apply font-playfair text-6xl text-center max-w-6xl leading-snug;
+}
+
+.grain-effect {
+  background-image: url('../assets/img/grain.png');
+}
