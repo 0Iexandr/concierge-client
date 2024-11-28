@@ -9,11 +9,14 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write ./src",
-    "prepare": "husky"
+    "prepare": "husky",
+    "host": "vite --host"
   },
   "dependencies": {
+    "motion": "^11.11.17",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-type-animation": "^3.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

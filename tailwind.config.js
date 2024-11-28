@@ -19,10 +19,14 @@ export default {
       },
       colors: {
         main: '#3B291F',
+        additionalText: '#5B4235',
       },
       fontFamily: {
         playfair: ['Playfair Display', 'serif'],
         inter: ['Inter', 'sans-serif'],
+      },
+      animation: {
+        'spin-slow': 'spin 10s linear infinite',
       },
     },
   },

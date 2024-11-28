@@ -16,9 +16,13 @@ const NavBar: FC<NavBarProps> = ({ className = '' }) => {
 
   return (
     <nav className={className}>
-      <ul className="flex gap-x-5">
+      <ul className="flex gap-x-5 lg:gap-x-12">
         {items.map((item, idx) => (
-          <li key={idx}>{item}</li>
+          <li key={idx}>
+            <a href="/" className="font-inter lg:text-lg">
+              {item}
+            </a>
+          </li>
         ))}
       </ul>
     </nav>

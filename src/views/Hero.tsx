@@ -17,11 +17,13 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-main opacity-70 grain-effect" />
       <div className="relative flex flex-col justify-center items-center h-full gap-y-10 container max-w-none">
         <h1 className="font-playfair text-3xl sm:text-4xl md:text-6xl text-center max-w-6xl sm:leading-snug md:leading-snug">
-          Experience the epitome and personalized of luxury service with COMPANY
+          <span className="uppercase">Experience</span> the epitome of luxury
+          service <span className="italic">with</span>{' '}
+          <span className="uppercase">Apex concierge dubai</span>
         </h1>
         <p className="font-inter md:text-xl text-center max-w-xl md:leading-normal leading-normal">
-          Artfully curating extraordinary experiences for those who recognize
-          and appreciate their unparalleled value
+          It is a premium and exclusive provider of personalized assistance and
+          luxury services
         </p>
         <Button text="Submit your request" variant="white" />
       </div>

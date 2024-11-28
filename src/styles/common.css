@@ -1,5 +1,17 @@
+.section__padding {
+  @apply py-16;
+}
+
 .section__title {
-  @apply font-playfair text-6xl text-center max-w-6xl leading-snug;
+  @apply font-inter text-xl font-bold text-additionalText;
+}
+
+.section__subtitle {
+  @apply text-main font-playfair text-3xl sm:text-4xl md:text-5xl text-center sm:leading-snug md:leading-snug;
+}
+
+.section__description {
+  @apply font-inter text-additionalText md:text-xl text-center md:leading-normal leading-normal;
 }
 
 .grain-effect {
