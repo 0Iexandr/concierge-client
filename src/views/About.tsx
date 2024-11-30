@@ -4,6 +4,13 @@ import car from '../assets/img/rolls-royce.jpg';
 import hotel from '../assets/img/hotel.jpg';
 import boat from '../assets/img/boat.jpg';
 
+const aboutData = {
+  images: {
+    src: [boat, hotel, car],
+    alt: ['boat', 'hotel', 'car'],
+  },
+};
+
 const About = () => {
   return (
     <section className="grain-effect container max-w-none section__padding">
@@ -23,23 +30,17 @@ const About = () => {
           imagination.
         </p>
         <Logo className="h-32" />
-        <div className="flex gap-3 flex-wrap justify-center">
-          <img
-            src={boat}
-            alt="yacht"
-            className="rounded-md w-80 h-80 object-cover saturate-50"
-          />
-          <img
-            src={hotel}
-            alt="yacht"
-            className="rounded-md w-80 h-80 object-cover saturate-50"
-          />
-          <img
-            src={car}
-            alt="yacht"
-            className="rounded-md w-80 h-80 object-cover saturate-50"
-          />
-        </div>
+        <ul className="flex gap-3 flex-wrap justify-center">
+          {aboutData.images.src.map((img, idx) => (
+            <li key={idx}>
+              <img
+                src={img}
+                alt={aboutData.images.alt[idx]}
+                className="rounded-md w-80 h-80 object-cover saturate-50"
+              />
+            </li>
+          ))}
+        </ul>
         <TypeAnimation
           sequence={[
             'Apex is Comfort',

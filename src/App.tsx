@@ -3,6 +3,8 @@ import ConciergeTypes from './views/ConciergeTypes';
 import About from './views/About';
 import Hero from './views/Hero';
 import Services from './views/Services';
+import Events from './views/Events';
+import EnquiryForm from './views/EnquiryForm';
 
 const App = () => {
   return (
@@ -11,6 +13,8 @@ const App = () => {
       <About />
       <ConciergeTypes />
       <Services />
+      <Events />
+      <EnquiryForm />
     </Layout>
   );
 };

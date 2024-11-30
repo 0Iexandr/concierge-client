@@ -40,7 +40,7 @@ const ConciergeTypes = () => {
         <img
           src={business}
           alt="personal boat"
-          className="rounded-md max-h-[46rem] md:max-h-[30rem] object-cover saturate-50"
+          className="rounded-md lg:max-h-[46rem] md:max-h-[30rem] object-cover saturate-50"
         />
         <div className="flex flex-col md:gap-y-16 gap-y-8 md:items-start items-center md:px-4 pt-8 md:pt-0">
           <h3 className="section__subtitle max-w-sm text-start">
