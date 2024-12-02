@@ -2,9 +2,10 @@ import { FC } from 'react';
 
 interface NavBarProps {
   className?: string;
+  textClassName?: string;
 }
 
-const NavBar: FC<NavBarProps> = ({ className = '' }) => {
+const NavBar: FC<NavBarProps> = ({ className = '', textClassName = '' }) => {
   const items = [
     'ABOUT',
     'CONCIERGE TYPES',
@@ -15,11 +16,14 @@ const NavBar: FC<NavBarProps> = ({ className = '' }) => {
   ];
 
   return (
-    <nav className={className}>
-      <ul className="flex gap-x-5 lg:gap-x-12">
+    <nav>
+      <ul className={className}>
         {items.map((item, idx) => (
           <li key={idx}>
-            <a href="/" className="font-inter lg:text-lg">
+            <a
+              href="/"
+              className={`font-inter md:text-base lg:text-lg text-sm ${textClassName}`}
+            >
               {item}
             </a>
           </li>

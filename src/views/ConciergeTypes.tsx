@@ -12,7 +12,7 @@ const ConciergeTypes = () => {
         <h2 className="section__title">CONCIERGE TYPES</h2>
         <span className="section__title">02</span>
       </div>
-      <div className="flex justify-between md:mb-16 flex-col md:flex-row mb-3">
+      <div className="flex justify-between md:mb-16 flex-col md:flex-row mb-3 xxl:justify-center xxl:gap-24">
         <img
           src={personal2}
           alt="personal boat"
@@ -36,7 +36,7 @@ const ConciergeTypes = () => {
           className="rounded-md lg:max-h-[46rem] md:max-h-[30rem] object-cover saturate-50"
         />
       </div>
-      <div className="flex justify-between flex-col md:flex-row">
+      <div className="flex justify-between flex-col md:flex-row xxl:justify-center xxl:gap-24">
         <img
           src={business}
           alt="personal boat"

@@ -6,6 +6,7 @@ export default {
       sm: '480px',
       md: '768px',
       lg: '1320px',
+      xxl: '1600px',
     },
     extend: {
       container: {
@@ -20,6 +21,7 @@ export default {
       colors: {
         main: '#3B291F',
         additionalText: '#5B4235',
+        skin: '#ACA19A',
       },
       fontFamily: {
         playfair: ['Playfair Display', 'serif'],

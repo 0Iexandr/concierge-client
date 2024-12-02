@@ -13,7 +13,7 @@ const Logo: FC<LogoProps> = ({ isWhite = false, className = '' }) => {
     <img
       src={isWhite ? whiteLogo : logo}
       alt="logo"
-      className={`h-20 ${className}`}
+      className={`h-20 w-fit ${className}`}
     />
   );
 };
