@@ -5,16 +5,25 @@ import Hero from './views/Hero';
 import Services from './views/Services';
 import Events from './views/Events';
 import EnquiryForm from './views/EnquiryForm';
+import ContactModal from './components/ContactModal';
+
+import { useState } from 'react';
 
 const App = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
     <Layout>
-      <Hero />
+      <Hero setIsContactOpen={setIsContactOpen} />
       <About />
-      <ConciergeTypes />
+      <ConciergeTypes setIsContactOpen={setIsContactOpen} />
       <Services />
-      <Events />
+      <Events setIsContactOpen={setIsContactOpen} />
       <EnquiryForm />
+      <ContactModal
+        isContactOpen={isContactOpen}
+        setIsContactOpen={setIsContactOpen}
+      />
     </Layout>
   );
 };

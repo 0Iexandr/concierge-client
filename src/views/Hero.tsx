@@ -1,9 +1,15 @@
+import { FC } from 'react';
+
 import background from '../assets/video/hero-background.mp4';
 import Button from '../components/Button';
 
-const Hero = () => {
+interface HeroProps {
+  setIsContactOpen: (isOpen: boolean) => void;
+}
+
+const Hero: FC<HeroProps> = ({ setIsContactOpen }) => {
   return (
-    <section className="relative h-screen">
+    <section className="relative h-screen h-sm:h-[768px]">
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         autoPlay
@@ -25,7 +31,11 @@ const Hero = () => {
           It is a premium and exclusive provider of personalized assistance and
           luxury services
         </p>
-        <Button text="Submit your request" variant="white" />
+        <Button
+          text="Submit your request"
+          variant="white"
+          onClick={() => setIsContactOpen(true)}
+        />
       </div>
     </section>
   );

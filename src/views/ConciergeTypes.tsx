@@ -1,3 +1,5 @@
+import { FC } from 'react';
+
 import Button from '../components/Button';
 
 import personal from '../assets/img/personal-concierge.jpg';
@@ -5,7 +7,11 @@ import personal2 from '../assets/img/personal-concierge2.jpg';
 import business from '../assets/img/business-concierge.jpg';
 import business2 from '../assets/img/business-concierge2.jpg';
 
-const ConciergeTypes = () => {
+interface ConciergeTypesProps {
+  setIsContactOpen: (isOpen: boolean) => void;
+}
+
+const ConciergeTypes: FC<ConciergeTypesProps> = ({ setIsContactOpen }) => {
   return (
     <section className="grain-effect container max-w-none section__padding">
       <div className="flex justify-between mb-16">
@@ -28,7 +34,11 @@ const ConciergeTypes = () => {
             personal affairs and lifestyle management.
           </p>
           <hr className="w-5/6 border-t-2 border-additionalText m-0 opacity-50" />
-          <Button variant="black" text="Discover more" />
+          <Button
+            variant="black"
+            text="Discover more"
+            onClick={() => setIsContactOpen(true)}
+          />
         </div>
         <img
           src={personal}
@@ -55,7 +65,11 @@ const ConciergeTypes = () => {
             of the workforce.
           </p>
           <hr className="w-5/6 border-t-2 border-additionalText m-0 opacity-50" />
-          <Button variant="black" text="Discover more" />
+          <Button
+            variant="black"
+            text="Discover more"
+            onClick={() => setIsContactOpen(true)}
+          />
         </div>
         <img
           src={business2}

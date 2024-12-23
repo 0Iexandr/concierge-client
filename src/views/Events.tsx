@@ -1,8 +1,14 @@
+import { FC } from 'react';
+
 import Button from '../components/Button';
 
 import boat from '../assets/img/private-boat.jpg';
 
-const Events = () => {
+interface EventsProps {
+  setIsContactOpen: (isOpen: boolean) => void;
+}
+
+const Events: FC<EventsProps> = ({ setIsContactOpen }) => {
   return (
     <section className="grain-effect container max-w-none section__padding">
       <div className="flex justify-between mb-16">
@@ -29,7 +35,11 @@ const Events = () => {
             the event, from catering and staffing to the guest list and beyond.
           </p>
           <hr className="w-4/5 border-t-2 border-additionalText m-0 opacity-50" />
-          <Button variant="black" text="Submit request" />
+          <Button
+            variant="black"
+            text="Submit request"
+            onClick={() => setIsContactOpen(true)}
+          />
           <p className="section__description md:text-start text-center opacity-60">
             VENUE SELECTION | EVENT PLANNING | GUEST LIST MANAGEMENT |
             ENTERTAINMENT ARRANGEMENTS | EVENT STAFFING | TRANSPORTATION

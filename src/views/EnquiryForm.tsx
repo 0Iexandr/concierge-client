@@ -18,7 +18,7 @@ const EnquiryForm = () => {
             className="rounded-md object-cover saturate-50"
           />
           <Logo
-            className="absolute md:-top-10 md:-left-10 -top-8 -left-4 border -rotate-[25deg] border-main bg-main rounded-full md:w-40 md:h-40 w-28 h-28 md:p-6 p-3"
+            className="absolute md:-top-10 md:-left-10 -top-8 -left-4 border -rotate-[25deg] border-main bg-main rounded-full md:w-40 md:h-40 w-28 h-28 md:p-6 p-4"
             isWhite
           />
         </div>

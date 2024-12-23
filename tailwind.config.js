@@ -7,6 +7,7 @@ export default {
       md: '768px',
       lg: '1320px',
       xxl: '1600px',
+      'h-sm': { raw: '(max-height: 640px)' },
     },
     extend: {
       container: {

@@ -6,15 +6,28 @@ import whiteLogo from '../assets/svg/logo-white.svg';
 type LogoProps = {
   isWhite?: boolean;
   className?: string;
+  isLink?: boolean;
 };
 
-const Logo: FC<LogoProps> = ({ isWhite = false, className = '' }) => {
-  return (
+const Logo: FC<LogoProps> = ({
+  isWhite = false,
+  className = '',
+  isLink = false,
+}) => {
+  const logoImage = (
     <img
       src={isWhite ? whiteLogo : logo}
       alt="logo"
       className={`h-20 w-fit ${className}`}
     />
+  );
+
+  return isLink ? (
+    <a href="/" className="inline-block">
+      {logoImage}
+    </a>
+  ) : (
+    logoImage
   );
 };
 

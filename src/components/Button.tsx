@@ -4,9 +4,15 @@ interface ButtonProps {
   text: string;
   variant: 'white' | 'black';
   className?: string;
+  onClick?: () => void;
 }
 
-const Button: FC<ButtonProps> = ({ text, variant, className = '' }) => {
+const Button: FC<ButtonProps> = ({
+  text,
+  variant,
+  className = '',
+  onClick,
+}) => {
   const isWhiteVariant = variant === 'white';
 
   const borderColor = isWhiteVariant ? 'border-white' : 'border-additionalText';
@@ -22,6 +28,7 @@ const Button: FC<ButtonProps> = ({ text, variant, className = '' }) => {
   return (
     <button
       className={`relative overflow-hidden border-2 font-medium font-inter text-lg px-8 py-4 rounded transition-all duration-300 ease-in-out group ${borderColor} ${textColor} ${className}`}
+      onClick={onClick}
     >
       <span
         className={`absolute inset-0 transform scale-x-0 origin-left transition-all duration-300 ease-in-out ${bgColor} group-hover:scale-x-100 group-focus:scale-x-100`}
