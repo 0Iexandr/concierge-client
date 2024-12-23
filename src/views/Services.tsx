@@ -47,11 +47,13 @@ const Services = () => {
       <ul className="flex gap-8 flex-wrap justify-center mt-16">
         {servicesData.cards.images.map((image, idx) => (
           <li key={idx} className="flex flex-col gap-y-4">
-            <img
-              src={image}
-              alt={servicesData.cards.titles[idx]}
-              className="rounded-md lg:max-h-[46rem] md:max-h-[30rem] object-cover saturate-50"
-            />
+            <div className="rounded-md overflow-hidden">
+              <img
+                src={image}
+                alt={servicesData.cards.titles[idx]}
+                className="rounded-md lg:max-h-[46rem] md:max-h-[30rem] object-cover saturate-50 transform transition-transform duration-300 ease-in-out hover:scale-110"
+              />
+            </div>
             <div className="flex justify-between">
               <h4 className="text-main font-playfair text-2xl sm:text-3xl md:text-4xl text-start">
                 {servicesData.cards.titles[idx]}

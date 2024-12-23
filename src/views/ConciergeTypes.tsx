@@ -19,11 +19,13 @@ const ConciergeTypes: FC<ConciergeTypesProps> = ({ setIsContactOpen }) => {
         <span className="section__title">02</span>
       </div>
       <div className="flex justify-between md:mb-16 flex-col md:flex-row mb-3 xxl:justify-center xxl:gap-24">
-        <img
-          src={personal2}
-          alt="personal boat"
-          className="rounded-md max-h-[28rem] object-cover saturate-50 hidden lg:inline-block"
-        />
+        <div className="rounded-md overflow-hidden hidden lg:inline-block">
+          <img
+            src={personal2}
+            alt="personal boat"
+            className="rounded-md max-h-[28rem] object-cover saturate-50 transform transition-transform duration-300 ease-in-out hover:scale-110"
+          />
+        </div>
         <div className="flex flex-col md:gap-y-16 gap-y-8 md:items-start items-center md:px-4 pb-8 md:pb-0">
           <h3 className="section__subtitle max-w-sm text-start">
             PERSONAL <span className="italic">concierge</span>
@@ -40,18 +42,22 @@ const ConciergeTypes: FC<ConciergeTypesProps> = ({ setIsContactOpen }) => {
             onClick={() => setIsContactOpen(true)}
           />
         </div>
-        <img
-          src={personal}
-          alt="personal boat"
-          className="rounded-md lg:max-h-[46rem] md:max-h-[30rem] object-cover saturate-50"
-        />
+        <div className="rounded-md overflow-hidden self-center">
+          <img
+            src={personal}
+            alt="personal boat"
+            className="rounded-md lg:max-h-[46rem] md:max-h-[30rem] object-cover saturate-50 transform transition-transform duration-300 ease-in-out hover:scale-110"
+          />
+        </div>
       </div>
       <div className="flex justify-between flex-col md:flex-row xxl:justify-center xxl:gap-24">
-        <img
-          src={business}
-          alt="personal boat"
-          className="rounded-md lg:max-h-[46rem] md:max-h-[30rem] object-cover saturate-50"
-        />
+        <div className="rounded-md overflow-hidden self-center">
+          <img
+            src={business}
+            alt="personal boat"
+            className="rounded-md lg:max-h-[46rem] md:max-h-[30rem] object-cover saturate-50 transform transition-transform duration-300 ease-in-out hover:scale-110"
+          />
+        </div>
         <div className="flex flex-col md:gap-y-16 gap-y-8 md:items-start items-center md:px-4 pt-8 md:pt-0">
           <h3 className="section__subtitle max-w-sm text-start">
             BUSINESS <span className="italic">concierge</span>
@@ -71,11 +77,13 @@ const ConciergeTypes: FC<ConciergeTypesProps> = ({ setIsContactOpen }) => {
             onClick={() => setIsContactOpen(true)}
           />
         </div>
-        <img
-          src={business2}
-          alt="personal boat"
-          className="rounded-md max-h-[28rem] self-end object-cover saturate-50 hidden lg:inline-block"
-        />
+        <div className="rounded-md overflow-hidden hidden lg:inline-block self-end">
+          <img
+            src={business2}
+            alt="personal boat"
+            className="rounded-md max-h-[28rem] object-cover saturate-50 transform transition-transform duration-300 ease-in-out hover:scale-110"
+          />
+        </div>
       </div>
     </section>
   );

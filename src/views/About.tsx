@@ -32,11 +32,11 @@ const About = () => {
         <Logo className="h-32" />
         <ul className="flex gap-3 flex-wrap justify-center">
           {aboutData.images.src.map((img, idx) => (
-            <li key={idx}>
+            <li key={idx} className="rounded-md w-80 h-80 overflow-hidden">
               <img
                 src={img}
                 alt={aboutData.images.alt[idx]}
-                className="rounded-md w-80 h-80 object-cover saturate-50"
+                className="w-full h-full object-cover saturate-50 transform transition-transform duration-300 ease-in-out hover:scale-110"
               />
             </li>
           ))}
