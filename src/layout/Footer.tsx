@@ -6,7 +6,7 @@ import Socials from '../components/Socials';
 const Footer = () => {
   return (
     <footer className="bg-main grain-effect container max-w-none py-12 flex flex-col gap-16">
-      <Logo isWhite />
+      <Logo isWhite className="w-fit" />
       <div className="flex md:justify-between flex-col md:flex-row gap-12">
         <NavBar
           className="flex flex-col gap-y-5"

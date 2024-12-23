@@ -18,7 +18,7 @@ const Logo: FC<LogoProps> = ({
     <img
       src={isWhite ? whiteLogo : logo}
       alt="logo"
-      className={`h-20 w-fit ${className}`}
+      className={`h-20 ${className}`}
     />
   );
 

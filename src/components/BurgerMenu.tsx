@@ -46,7 +46,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ isBurgerOpen, setIsBurgerOpen }) => {
         >
           <img src={close} alt="close" />
         </button>
-        <Logo />
+        <Logo className="w-fit" />
         <NavBar
           className="flex flex-col gap-y-5"
           textClassName="text-xl break-words text-additionalText"
