@@ -34,9 +34,9 @@ const ConciergeTypes: FC<ConciergeTypesProps> = ({ setIsContactOpen }) => {
             PERSONAL <span className="italic">concierge</span>
           </h3>
           <p className="section__description max-w-sm md:text-start text-center">
-            Personal concierge services revolve around meeting the individual
-            needs of clients, offering tailored assistance and support for their
-            personal affairs and lifestyle management.
+            Personal concierge services focus on addressing the unique needs of
+            clients, delivering bespoke support and solutions for their personal
+            matters and lifestyle management.
           </p>
           <hr className="w-5/6 border-t-2 border-additionalText m-0 opacity-50" />
           <Button
@@ -66,12 +66,12 @@ const ConciergeTypes: FC<ConciergeTypesProps> = ({ setIsContactOpen }) => {
             BUSINESS <span className="italic">concierge</span>
           </h3>
           <p className="section__description max-w-sm md:text-start text-center">
-            Сoncierge services are designed to provide added value to businesses
-            by offering comprehensive support to employees as an additional
-            benefit. This strategic initiative aims to enhance employee
-            satisfaction, productivity, and overall well-being through curated
-            assistance programs customised to the diverse needs and preferences
-            of the workforce.
+            Concierge services are crafted to bring value to businesses by
+            offering dedicated support to employees as a supplemental perk. This
+            thoughtful approach seeks to boost employee satisfaction,
+            efficiency, and overall well-being through tailored assistance
+            programs aligned with the diverse demands and preferences of the
+            team.
           </p>
           <hr className="w-5/6 border-t-2 border-additionalText m-0 opacity-50" />
           <Button

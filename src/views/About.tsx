@@ -23,14 +23,14 @@ const About = () => {
       </div>
       <div className="flex flex-col gap-y-8 items-center">
         <h3 className="section__subtitle max-w-5xl">
-          at the APEX of LIFESTYLE MANAGEMENT, COMPANY EPITOMISES UNPARALLELED
-          SOPHISTICATION and REFINEMENT
+          <span className="italic">at the</span> PINNACLE OF LIFESTYLE
+          MANAGEMENT, OUR COMPANY EMBODIES UNRIVALED GRACE{' '}
+          <span className="italic">and</span> DISTINCTION
         </h3>
         <p className="section__description max-w-2xl">
-          With a sweeping array of services that redefine the very essence of
-          luxury concierge, we embark on a journey that transcends the ordinary,
-          enriching the lives of our esteemed clients in ways beyond
-          imagination.
+          With an expansive selection of services that elevate the standard of
+          luxury concierge, we embark on a mission that surpasses expectations,
+          enhancing the lives of our valued clients in extraordinary ways.
         </p>
         <Logo className="h-32" />
         <ul className="flex gap-3 flex-wrap justify-center">
@@ -66,10 +66,10 @@ const About = () => {
         />
         <hr className="w-2/3 md:w-1/4 lg:w-1/5 border-t-2 border-additionalText m-0 opacity-50" />
         <p className="section__description max-w-2xl opacity-60">
-          Through a seamless connection with a dedicated lifestyle manager, our
-          world unfolds with unmatched responsiveness and access, crafting
-          experiences that are not just transformative but also exquisitely
-          memorable and profoundly meaningful.
+          Through effortless collaboration with a personal lifestyle manager,
+          our realm provides unparalleled attentiveness and access, delivering
+          experiences that are not only transformative but also truly
+          unforgettable and deeply fulfilling.
         </p>
       </div>
     </section>

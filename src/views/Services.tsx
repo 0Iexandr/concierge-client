@@ -39,12 +39,13 @@ const Services = () => {
       </div>
       <div className="flex flex-col gap-y-8 items-center">
         <h3 className="section__subtitle max-w-5xl">
-          UNDER the GUIDANCE of INDUSTRY-LEADING EXPERTS, OUR SPECIALISED TEAM
-          FULFILS REQUESTS in a MATTER of HOURS
+          GUIDED <span className="italic">by</span> INDUSTRY-LEADING EXPERTS,
+          OUR SPECIALISED TEAM ENSURES REQUESTS{' '}
+          <span className="italic">are</span> FULFILLED IN JUST HOURS
         </h3>
         <p className="section__description">
-          We craft ultimate experiences that are exceeding any possible
-          expectations.
+          We create tailored experiences that consistently surpass every
+          expectation.
         </p>
       </div>
       <ul className="flex gap-8 flex-wrap justify-center mt-16">

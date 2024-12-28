@@ -9,6 +9,7 @@ const ConciergeTypes = lazy(() => import('./views/ConciergeTypes'));
 const Services = lazy(() => import('./views/Services'));
 const Events = lazy(() => import('./views/Events'));
 const EnquiryForm = lazy(() => import('./views/EnquiryForm'));
+const Partners = lazy(() => import('./views/Partners'));
 
 const App = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -21,6 +22,7 @@ const App = () => {
         <ConciergeTypes setIsContactOpen={setIsContactOpen} />
         <Services />
         <Events setIsContactOpen={setIsContactOpen} />
+        <Partners />
         <EnquiryForm />
         <ContactModal
           isContactOpen={isContactOpen}
