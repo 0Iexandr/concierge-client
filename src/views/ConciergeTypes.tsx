@@ -13,7 +13,10 @@ interface ConciergeTypesProps {
 
 const ConciergeTypes: FC<ConciergeTypesProps> = ({ setIsContactOpen }) => {
   return (
-    <section className="grain-effect container max-w-none section__padding">
+    <section
+      className="grain-effect container max-w-none section__padding"
+      id="types"
+    >
       <div className="flex justify-between mb-16">
         <h2 className="section__title">CONCIERGE TYPES</h2>
         <span className="section__title">02</span>

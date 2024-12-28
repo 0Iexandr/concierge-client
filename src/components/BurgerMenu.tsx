@@ -50,6 +50,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ isBurgerOpen, setIsBurgerOpen }) => {
         <NavBar
           className="flex flex-col gap-y-5"
           textClassName="text-xl break-words text-additionalText"
+          setIsBurgerOpen={setIsBurgerOpen}
         />
         <hr className="w-full border-t-2 border-additionalText m-0 opacity-20" />
       </div>

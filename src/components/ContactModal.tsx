@@ -41,7 +41,7 @@ const ContactModal: FC<BurgerMenuProps> = ({
       onClick={handleBackdropClick}
     >
       <div
-        className={`relative flex flex-col items-center gap-y-10 w-[90vw] h-[95vh] max-w-lg bg-[#F0F0F0] grain-effect p-8 rounded-lg shadow-lg transition-transform duration-300 overflow-y-auto ${
+        className={`relative flex flex-col items-center gap-y-10 w-[90vw] h-[95vh] max-w-xl bg-[#F0F0F0] grain-effect p-8 rounded-lg shadow-lg transition-transform duration-300 overflow-y-auto ${
           isContactOpen ? 'scale-100' : 'scale-90'
         }`}
       >

@@ -10,7 +10,10 @@ interface EventsProps {
 
 const Events: FC<EventsProps> = ({ setIsContactOpen }) => {
   return (
-    <section className="grain-effect container max-w-none section__padding">
+    <section
+      className="grain-effect container max-w-none section__padding"
+      id="events"
+    >
       <div className="flex justify-between mb-16">
         <h2 className="section__title">EVENTS</h2>
         <span className="section__title">04</span>

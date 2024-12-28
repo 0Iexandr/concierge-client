@@ -29,7 +29,10 @@ const servicesData = {
 
 const Services = () => {
   return (
-    <section className="grain-effect container max-w-none section__padding">
+    <section
+      className="grain-effect container max-w-none section__padding"
+      id="services"
+    >
       <div className="flex justify-between mb-16">
         <h2 className="section__title">SERVICES</h2>
         <span className="section__title">03</span>

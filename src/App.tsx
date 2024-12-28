@@ -1,30 +1,33 @@
+import { Suspense, lazy, useState } from 'react';
 import Layout from './layout/Layout';
-import ConciergeTypes from './views/ConciergeTypes';
-import About from './views/About';
-import Hero from './views/Hero';
-import Services from './views/Services';
-import Events from './views/Events';
-import EnquiryForm from './views/EnquiryForm';
 import ContactModal from './components/ContactModal';
+import Loader from './components/Loader';
 
-import { useState } from 'react';
+const Hero = lazy(() => import('./views/Hero'));
+const About = lazy(() => import('./views/About'));
+const ConciergeTypes = lazy(() => import('./views/ConciergeTypes'));
+const Services = lazy(() => import('./views/Services'));
+const Events = lazy(() => import('./views/Events'));
+const EnquiryForm = lazy(() => import('./views/EnquiryForm'));
 
 const App = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
-    <Layout>
-      <Hero setIsContactOpen={setIsContactOpen} />
-      <About />
-      <ConciergeTypes setIsContactOpen={setIsContactOpen} />
-      <Services />
-      <Events setIsContactOpen={setIsContactOpen} />
-      <EnquiryForm />
-      <ContactModal
-        isContactOpen={isContactOpen}
-        setIsContactOpen={setIsContactOpen}
-      />
-    </Layout>
+    <Suspense fallback={<Loader />}>
+      <Layout>
+        <Hero setIsContactOpen={setIsContactOpen} />
+        <About />
+        <ConciergeTypes setIsContactOpen={setIsContactOpen} />
+        <Services />
+        <Events setIsContactOpen={setIsContactOpen} />
+        <EnquiryForm />
+        <ContactModal
+          isContactOpen={isContactOpen}
+          setIsContactOpen={setIsContactOpen}
+        />
+      </Layout>
+    </Suspense>
   );
 };
 

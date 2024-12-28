@@ -5,7 +5,10 @@ import envelope from '../assets/img/envelope.jpg';
 
 const EnquiryForm = () => {
   return (
-    <section className="grain-effect container max-w-none section__padding">
+    <section
+      className="grain-effect container max-w-none section__padding"
+      id="form"
+    >
       <div className="flex justify-between mb-16">
         <h2 className="section__title">ENQUIRY FORM</h2>
         <span className="section__title">05</span>
