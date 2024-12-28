@@ -1,3 +1,6 @@
+import { FC } from 'react';
+import { motion } from 'framer-motion';
+
 import verde from '../assets/img/verde.jpg';
 import verdeBeach from '../assets/img/verde-beach.jpg';
 import coucou from '../assets/img/coucou.jpg';
@@ -19,7 +22,25 @@ const partnersData = {
   },
 };
 
-const Partners = () => {
+const Partners: FC = () => {
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut', delay: index * 0.3 },
+    }),
+  };
+
   return (
     <section
       className="grain-effect container max-w-none section__padding"
@@ -30,18 +51,38 @@ const Partners = () => {
         <span className="section__title">05</span>
       </div>
       <div className="flex flex-col gap-y-8 items-center">
-        <h3 className="section__subtitle max-w-5xl">
+        <motion.h3
+          className="section__subtitle max-w-5xl"
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           OUR PARTNERS - EXCLUSIVE RESTAURANTS, HOTELS{' '}
           <span className="italic">and</span> SERVICES FOR YOU
-        </h3>
-        <p className="section__description max-w-2xl">
+        </motion.h3>
+        <motion.p
+          className="section__description max-w-2xl"
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           Collaborating with industry leaders to craft unique and unforgettable
           experiences.
-        </p>
+        </motion.p>
       </div>
       <ul className="flex gap-8 flex-wrap justify-center mt-16">
         {partnersData.cards.images.map((image, idx) => (
-          <li key={idx} className="max-w-[34rem]">
+          <motion.li
+            key={idx}
+            className="max-w-[34rem]"
+            variants={imageVariants}
+            custom={idx}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <a
               href={partnersData.cards.links[idx]}
               className="flex flex-col gap-y-4"
@@ -64,11 +105,17 @@ const Partners = () => {
                 </span>
               </div>
               <hr className="w-full border-t-2 border-additionalText m-0 opacity-50" />
-              <p className="section__description text-start opacity-60">
+              <motion.p
+                className="section__description text-start opacity-60"
+                variants={textVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
                 {partnersData.cards.descriptions[idx]}
-              </p>
+              </motion.p>
             </a>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </section>

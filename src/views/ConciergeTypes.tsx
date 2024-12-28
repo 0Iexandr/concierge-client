@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 
 import Button from '../components/Button';
 
@@ -12,16 +13,41 @@ interface ConciergeTypesProps {
 }
 
 const ConciergeTypes: FC<ConciergeTypesProps> = ({ setIsContactOpen }) => {
+  const leftAnimation = {
+    hidden: { x: '-100%', opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  };
+
+  const rightAnimation = {
+    hidden: { x: '100%', opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  };
+
   return (
     <section
-      className="grain-effect container max-w-none section__padding"
+      className="grain-effect container max-w-none section__padding overflow-hidden"
       id="types"
     >
       <div className="flex justify-between mb-16">
         <h2 className="section__title">CONCIERGE TYPES</h2>
         <span className="section__title">02</span>
       </div>
-      <div className="flex justify-between md:mb-16 flex-col md:flex-row mb-3 xxl:justify-center xxl:gap-24">
+      <motion.div
+        className="flex justify-between md:mb-16 flex-col md:flex-row mb-3 xxl:justify-center xxl:gap-24"
+        variants={leftAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        style={{ overflow: 'hidden' }}
+      >
         <div className="rounded-md overflow-hidden hidden lg:inline-block">
           <img
             src={personal2}
@@ -52,8 +78,15 @@ const ConciergeTypes: FC<ConciergeTypesProps> = ({ setIsContactOpen }) => {
             className="rounded-md lg:max-h-[46rem] md:max-h-[30rem] object-cover saturate-50 transform transition-transform duration-300 ease-in-out hover:scale-110"
           />
         </div>
-      </div>
-      <div className="flex justify-between flex-col md:flex-row xxl:justify-center xxl:gap-24">
+      </motion.div>
+      <motion.div
+        className="flex justify-between flex-col md:flex-row xxl:justify-center xxl:gap-24"
+        variants={rightAnimation}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        style={{ overflow: 'hidden' }}
+      >
         <div className="rounded-md overflow-hidden self-center">
           <img
             src={business}
@@ -87,7 +120,7 @@ const ConciergeTypes: FC<ConciergeTypesProps> = ({ setIsContactOpen }) => {
             className="rounded-md max-h-[28rem] object-cover saturate-50 transform transition-transform duration-300 ease-in-out hover:scale-110"
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

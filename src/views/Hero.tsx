@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 
 import background from '../assets/video/hero-background.mp4';
 import Button from '../components/Button';
@@ -8,6 +9,15 @@ interface HeroProps {
 }
 
 const Hero: FC<HeroProps> = ({ setIsContactOpen }) => {
+  const containerVariants = {
+    hidden: { x: '-100%', opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  };
+
   return (
     <section className="relative h-screen h-sm:h-[768px]">
       <video
@@ -21,7 +31,12 @@ const Hero: FC<HeroProps> = ({ setIsContactOpen }) => {
         Your browser does not support the video tag.
       </video>
       <div className="absolute top-0 left-0 w-full h-full bg-main opacity-70 grain-effect" />
-      <div className="relative flex flex-col justify-center items-center h-full gap-y-10 container max-w-none">
+      <motion.div
+        className="relative flex flex-col justify-center items-center h-full gap-y-10 container max-w-none"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <h1 className="font-playfair text-3xl sm:text-4xl md:text-6xl text-center max-w-6xl sm:leading-snug md:leading-snug">
           <span className="uppercase">Experience</span> the epitome of luxury
           service <span className="italic">with</span>{' '}
@@ -36,7 +51,7 @@ const Hero: FC<HeroProps> = ({ setIsContactOpen }) => {
           variant="white"
           onClick={() => setIsContactOpen(true)}
         />
-      </div>
+      </motion.div>
     </section>
   );
 };

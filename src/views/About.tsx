@@ -1,4 +1,7 @@
+import { FC } from 'react';
+import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
+
 import Logo from '../components/Logo';
 import car from '../assets/img/rolls-royce.jpg';
 import hotel from '../assets/img/hotel.jpg';
@@ -11,7 +14,24 @@ const aboutData = {
   },
 };
 
-const About = () => {
+const About: FC = () => {
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  };
+  const imageVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut', delay: index * 0.3 },
+    }),
+  };
+
   return (
     <section
       className="grain-effect container max-w-none section__padding"
@@ -21,29 +41,52 @@ const About = () => {
         <h2 className="section__title">ABOUT</h2>
         <span className="section__title">01</span>
       </div>
+
       <div className="flex flex-col gap-y-8 items-center">
-        <h3 className="section__subtitle max-w-5xl">
+        <motion.h3
+          className="section__subtitle max-w-5xl"
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <span className="italic">at the</span> PINNACLE OF LIFESTYLE
           MANAGEMENT, OUR COMPANY EMBODIES UNRIVALED GRACE{' '}
           <span className="italic">and</span> DISTINCTION
-        </h3>
-        <p className="section__description max-w-2xl">
+        </motion.h3>
+        <motion.p
+          className="section__description max-w-2xl"
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           With an expansive selection of services that elevate the standard of
           luxury concierge, we embark on a mission that surpasses expectations,
           enhancing the lives of our valued clients in extraordinary ways.
-        </p>
+        </motion.p>
         <Logo className="h-32" />
-        <ul className="flex gap-3 flex-wrap justify-center">
+        <motion.ul
+          className="flex gap-3 flex-wrap justify-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {aboutData.images.src.map((img, idx) => (
-            <li key={idx} className="rounded-md w-80 h-80 overflow-hidden">
+            <motion.li
+              key={idx}
+              className="rounded-md w-80 h-80 overflow-hidden"
+              variants={imageVariants}
+              custom={idx}
+            >
               <img
                 src={img}
                 alt={aboutData.images.alt[idx]}
                 className="w-full h-full object-cover saturate-50 transform transition-transform duration-300 ease-in-out hover:scale-110"
               />
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
         <TypeAnimation
           sequence={[
             'Apex is Comfort',
@@ -65,12 +108,18 @@ const About = () => {
           className="font-inter text-additionalText text-2xl"
         />
         <hr className="w-2/3 md:w-1/4 lg:w-1/5 border-t-2 border-additionalText m-0 opacity-50" />
-        <p className="section__description max-w-2xl opacity-60">
+        <motion.p
+          className="section__description max-w-2xl opacity-60"
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           Through effortless collaboration with a personal lifestyle manager,
           our realm provides unparalleled attentiveness and access, delivering
           experiences that are not only transformative but also truly
           unforgettable and deeply fulfilling.
-        </p>
+        </motion.p>
       </div>
     </section>
   );

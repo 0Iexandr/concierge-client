@@ -1,3 +1,6 @@
+import { FC } from 'react';
+import { motion } from 'framer-motion';
+
 import travel from '../assets/img/travel.jpg';
 import dining from '../assets/img/dining.jpg';
 import yacht from '../assets/img/yacht.jpg';
@@ -27,7 +30,25 @@ const servicesData = {
   },
 };
 
-const Services = () => {
+const Services: FC = () => {
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut', delay: index * 0.3 },
+    }),
+  };
+
   return (
     <section
       className="grain-effect container max-w-none section__padding"
@@ -38,19 +59,39 @@ const Services = () => {
         <span className="section__title">03</span>
       </div>
       <div className="flex flex-col gap-y-8 items-center">
-        <h3 className="section__subtitle max-w-5xl">
+        <motion.h3
+          className="section__subtitle max-w-5xl"
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           GUIDED <span className="italic">by</span> INDUSTRY-LEADING EXPERTS,
           OUR SPECIALISED TEAM ENSURES REQUESTS{' '}
           <span className="italic">are</span> FULFILLED IN JUST HOURS
-        </h3>
-        <p className="section__description">
+        </motion.h3>
+        <motion.p
+          className="section__description"
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           We create tailored experiences that consistently surpass every
           expectation.
-        </p>
+        </motion.p>
       </div>
       <ul className="flex gap-8 flex-wrap justify-center mt-16">
         {servicesData.cards.images.map((image, idx) => (
-          <li key={idx} className="flex flex-col gap-y-4">
+          <motion.li
+            key={idx}
+            className="flex flex-col gap-y-4"
+            variants={imageVariants}
+            custom={idx}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <div className="rounded-md overflow-hidden">
               <img
                 src={image}
@@ -67,10 +108,16 @@ const Services = () => {
               </span>
             </div>
             <hr className="w-full border-t-2 border-additionalText m-0 opacity-50" />
-            <p className="section__description text-start opacity-60">
+            <motion.p
+              className="section__description text-start opacity-60"
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               {servicesData.cards.descriptions[idx]}
-            </p>
-          </li>
+            </motion.p>
+          </motion.li>
         ))}
       </ul>
     </section>
