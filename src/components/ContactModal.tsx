@@ -8,11 +8,15 @@ import Logo from './Logo';
 interface BurgerMenuProps {
   isContactOpen: boolean;
   setIsContactOpen: (isOpen: boolean) => void;
+  selectedService: string;
+  setSelectedService: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const ContactModal: FC<BurgerMenuProps> = ({
   isContactOpen,
   setIsContactOpen,
+  selectedService,
+  setSelectedService,
 }) => {
   useEffect(() => {
     if (isContactOpen) {
@@ -25,9 +29,14 @@ const ContactModal: FC<BurgerMenuProps> = ({
     };
   }, [isContactOpen]);
 
+  const closeModal = () => {
+    setIsContactOpen(false);
+    setSelectedService('');
+  };
+
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
-      setIsContactOpen(false);
+      closeModal();
     }
   };
 
@@ -41,12 +50,12 @@ const ContactModal: FC<BurgerMenuProps> = ({
       onClick={handleBackdropClick}
     >
       <div
-        className={`relative flex flex-col items-center gap-y-10 w-[90vw] h-[95vh] max-w-xl bg-[#F0F0F0] grain-effect p-8 rounded-lg shadow-lg transition-transform duration-300 overflow-y-auto ${
+        className={`relative flex flex-col items-center gap-y-10 w-[90vw] h-[95vh] max-w-xl bg-[#F0F0F0] grain-effect p-8 rounded-lg shadow-lg transition-transform duration-300 overflow-y-auto scrollbar ${
           isContactOpen ? 'scale-100' : 'scale-90'
         }`}
       >
         <button
-          onClick={() => setIsContactOpen(false)}
+          onClick={() => closeModal()}
           className="w-10 h-10 absolute top-8 right-8"
         >
           <img src={close} alt="close" />
@@ -54,7 +63,7 @@ const ContactModal: FC<BurgerMenuProps> = ({
         <Logo />
         <div className="flex flex-col gap-y-4">
           <h3 className="text-main font-playfair text-2xl sm:text-3xl md:text-4xl font-medium text-center sm:leading-snug md:leading-snug">
-            LUXURY CONCIERGE
+            {selectedService === '' ? 'LUXURY CONCIERGE' : selectedService}
           </h3>
           <p className="font-inter text-additionalText text-sm md:text-base font-light text-center leading-normal">
             Fill the form and we will contact you shortly

@@ -17,3 +17,11 @@
 .grain-effect {
   background-image: url('../assets/img/grain.png');
 }
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #3b291f;
+}

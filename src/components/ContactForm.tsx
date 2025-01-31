@@ -33,7 +33,7 @@ const ContactForm = () => (
           className="absolute left-0 top-4 text-gray-400 text-2xl transition-all duration-300 font-inter
             peer-placeholder-shown:top-0 peer-placeholder-shown:text-xl peer-placeholder-shown:text-skin 
             peer-focus:-top-4 peer-focus:text-base peer-focus:text-additionalText 
-            peer-valid:-top-4 peer-valid:text-base peer-valid:text-additionalText cursor-text"
+            peer-valid:-top-4 peer-valid:text-base peer-valid:text-additionalText cursor-text pointer-events-none"
         >
           {label}
         </label>
@@ -52,7 +52,7 @@ const ContactForm = () => (
         className="absolute left-0 top-4 text-gray-400 text-2xl transition-all duration-300 font-inter
           peer-placeholder-shown:top-0 peer-placeholder-shown:text-xl peer-placeholder-shown:text-skin 
           peer-focus:-top-4 peer-focus:text-base peer-focus:text-additionalText 
-          peer-valid:-top-4 peer-valid:text-base peer-valid:text-additionalText cursor-text"
+          peer-valid:-top-4 peer-valid:text-base peer-valid:text-additionalText cursor-text pointer-events-none"
       >
         Let us know how we can help
       </label>

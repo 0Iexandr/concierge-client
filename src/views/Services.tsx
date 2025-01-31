@@ -1,36 +1,47 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 
-import travel from '../assets/img/travel.jpg';
+import car from '../assets/img/car-rental.jpg';
 import dining from '../assets/img/dining.jpg';
 import yacht from '../assets/img/yacht.jpg';
-import ticketing from '../assets/img/ticketing.jpg';
-import wellness from '../assets/img/health-wellness.jpg';
-import lifestyle from '../assets/img/lifestyle-management.jpg';
+import dentist from '../assets/img/dentist.jpg';
+import outfits from '../assets/img/outfits.jpg';
+import flowers from '../assets/img/flowers.jpg';
+import events from '../assets/img/events.jpg';
 
 const servicesData = {
   cards: {
-    images: [travel, dining, yacht, ticketing, wellness, lifestyle],
+    images: [car, dining, yacht, dentist, outfits, flowers, events],
     titles: [
-      'Travel',
-      'Fine-dining&nightlife',
-      'Jets&yachts rentals',
-      'Ticketing',
-      'Health&wellness',
-      'Lifestyle management',
+      'Car rental',
+      'Restaurants&nightlife',
+      'Yachts rentals',
+      'Dentist',
+      'Designer outfits',
+      'Flowers',
+      'Events',
     ],
     descriptions: [
-      'Crafting unforgettable moments',
-      'Getting last-minute bookings anywhere',
-      'Booking exclusive transportation',
-      'VIP tickets and backstage access',
-      'Taking care of your inner self',
-      'Staying reachable 24/7',
+      'Luxury car rentals',
+      'Exclusive dining & nightlife',
+      'Premium yacht charters',
+      'Elite dental services',
+      'High-end fashion',
+      'Exclusive flower delivery',
+      'VIP event access',
     ],
   },
 };
 
-const Services: FC = () => {
+interface ServicesProps {
+  setIsContactOpen: (isOpen: boolean) => void;
+  setSelectedService: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const Services: FC<ServicesProps> = ({
+  setIsContactOpen,
+  setSelectedService,
+}) => {
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -47,6 +58,11 @@ const Services: FC = () => {
       y: 0,
       transition: { duration: 0.8, ease: 'easeOut', delay: index * 0.3 },
     }),
+  };
+
+  const openModal = (serviceTitle: string) => {
+    setSelectedService(serviceTitle);
+    setIsContactOpen(true);
   };
 
   return (
@@ -67,7 +83,7 @@ const Services: FC = () => {
           viewport={{ once: true }}
         >
           GUIDED <span className="italic">by</span> INDUSTRY-LEADING EXPERTS,
-          OUR SPECIALISED TEAM ENSURES REQUESTS{' '}
+          OUR SPECIALIZED TEAM ENSURES REQUESTS{' '}
           <span className="italic">are</span> FULFILLED IN JUST HOURS
         </motion.h3>
         <motion.p
@@ -85,12 +101,13 @@ const Services: FC = () => {
         {servicesData.cards.images.map((image, idx) => (
           <motion.li
             key={idx}
-            className="flex flex-col gap-y-4"
+            className="flex flex-col gap-y-4 cursor-pointer"
             variants={imageVariants}
             custom={idx}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
+            onClick={() => openModal(servicesData.cards.titles[idx])}
           >
             <div className="rounded-md overflow-hidden">
               <img

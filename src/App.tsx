@@ -13,6 +13,7 @@ const Partners = lazy(() => import('./views/Partners'));
 
 const App = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState('');
 
   return (
     <Suspense fallback={<Loader />}>
@@ -20,13 +21,18 @@ const App = () => {
         <Hero setIsContactOpen={setIsContactOpen} />
         <About />
         <ConciergeTypes setIsContactOpen={setIsContactOpen} />
-        <Services />
+        <Services
+          setSelectedService={setSelectedService}
+          setIsContactOpen={setIsContactOpen}
+        />
         <Events setIsContactOpen={setIsContactOpen} />
         <Partners />
         <EnquiryForm />
         <ContactModal
           isContactOpen={isContactOpen}
           setIsContactOpen={setIsContactOpen}
+          setSelectedService={setSelectedService}
+          selectedService={selectedService}
         />
       </Layout>
     </Suspense>
