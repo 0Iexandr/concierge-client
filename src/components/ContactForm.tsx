@@ -13,7 +13,7 @@ const inputs = [
     id: 'number',
     label: 'Phone number*',
     placeholder: 'Phone number',
-    type: 'number',
+    type: 'tel',
   },
 ];
 
