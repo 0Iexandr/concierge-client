@@ -8,7 +8,7 @@ const inputs = [
     placeholder: 'Name',
     type: 'text',
   },
-  { id: 'mail', label: 'Email*', placeholder: 'Email', type: 'email' },
+  { id: 'email', label: 'Email*', placeholder: 'Email', type: 'text' },
   {
     id: 'number',
     label: 'Phone number*',
