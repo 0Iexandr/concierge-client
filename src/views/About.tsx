@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 
 import Logo from '../components/Logo';
-import car from '../assets/img/rolls-royce.jpg';
-import hotel from '../assets/img/hotel.jpg';
-import boat from '../assets/img/boat.jpg';
+import car from '../assets/img/rolls-royce.webp';
+import hotel from '../assets/img/hotel.webp';
+import boat from '../assets/img/boat.webp';
 
 const aboutData = {
   images: {

@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import Button from './Button';
 
 const inputs = [
@@ -16,14 +17,32 @@ const inputs = [
   },
 ];
 
-const ContactForm = () => (
-  <form className="flex flex-col gap-y-10 w-full">
+interface ContactFormProps {
+  selectedService?: string;
+}
+
+const ContactForm: FC<ContactFormProps> = ({ selectedService }) => (
+  <form
+    className="flex flex-col gap-y-10 w-full"
+    action="https://formspree.io/f/xgvoyzpw"
+    method="POST"
+  >
+    <input
+      type="hidden"
+      id="service"
+      name="Service"
+      value={
+        !selectedService || selectedService === ''
+          ? 'Luxury Concierge'
+          : selectedService
+      }
+    />
     {inputs.map(({ id, label, placeholder, type }) => (
       <div key={id} className="relative">
         <input
           type={type}
           id={id}
-          name={id}
+          name={label}
           placeholder={placeholder}
           required
           className="peer w-full bg-transparent border-b-2 border-additionalText text-additionalText text-lg outline-none placeholder-transparent py-2"
@@ -42,7 +61,7 @@ const ContactForm = () => (
     <div className="relative">
       <textarea
         id="help"
-        name="help"
+        name="How we can help"
         placeholder="Let us know how we can help"
         required
         className="peer w-full bg-transparent border-b-2 border-additionalText text-additionalText text-lg outline-none placeholder-transparent py-2 resize-y min-h-20"

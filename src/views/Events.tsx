@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import Button from '../components/Button';
 
-import boat from '../assets/img/private-boat.jpg';
+import boat from '../assets/img/private-boat.webp';
 
 interface EventsProps {
   setIsContactOpen: (isOpen: boolean) => void;

@@ -1,7 +1,7 @@
 import ContactForm from '../components/ContactForm';
 import Logo from '../components/Logo';
 
-import envelope from '../assets/img/envelope.jpg';
+import envelope from '../assets/img/envelope.webp';
 
 const EnquiryForm = () => {
   return (

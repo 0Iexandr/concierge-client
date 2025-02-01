@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 import Button from '../components/Button';
 
-import personal from '../assets/img/personal-concierge.jpg';
-import personal2 from '../assets/img/personal-concierge2.jpg';
-import business from '../assets/img/business-concierge.jpg';
-import business2 from '../assets/img/business-concierge2.jpg';
+import personal from '../assets/img/personal-concierge.webp';
+import personal2 from '../assets/img/personal-concierge2.webp';
+import business from '../assets/img/business-concierge.webp';
+import business2 from '../assets/img/business-concierge2.webp';
 
 interface ConciergeTypesProps {
   setIsContactOpen: (isOpen: boolean) => void;

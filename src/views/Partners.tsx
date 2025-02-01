@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 
-import verde from '../assets/img/verde.jpg';
-import verdeBeach from '../assets/img/verde-beach.jpg';
-import coucou from '../assets/img/coucou.jpg';
+import verde from '../assets/img/verde.webp';
+import verdeBeach from '../assets/img/verde-beach.webp';
+import coucou from '../assets/img/coucou.webp';
 
 const partnersData = {
   cards: {

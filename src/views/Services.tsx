@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 
-import car from '../assets/img/car-rental.jpg';
-import dining from '../assets/img/dining.jpg';
-import yacht from '../assets/img/yacht.jpg';
-import dentist from '../assets/img/dentist.jpg';
-import outfits from '../assets/img/outfits.jpg';
-import flowers from '../assets/img/flowers.jpg';
-import events from '../assets/img/events.jpg';
+import car from '../assets/img/car-rental.webp';
+import dining from '../assets/img/dining.webp';
+import yacht from '../assets/img/yacht.webp';
+import dentist from '../assets/img/dentist.webp';
+import outfits from '../assets/img/outfits.webp';
+import flowers from '../assets/img/flowers.webp';
+import events from '../assets/img/events.webp';
 
 const servicesData = {
   cards: {

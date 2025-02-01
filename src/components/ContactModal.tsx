@@ -69,7 +69,7 @@ const ContactModal: FC<BurgerMenuProps> = ({
             Fill the form and we will contact you shortly
           </p>
         </div>
-        <ContactForm />
+        <ContactForm selectedService={selectedService} />
       </div>
     </div>,
     document.querySelector('#modal') as HTMLElement,
