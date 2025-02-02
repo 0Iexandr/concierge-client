@@ -12,7 +12,7 @@ const Socials = () => {
           Telegram
         </a>
         <a
-          href="https://www.instagram.com/mark_brsky/"
+          href="https://www.instagram.com/apex_concierge"
           className="font-inter md:text-2xl text-xl break-words"
           target="_blank"
           rel="noreferrer"
