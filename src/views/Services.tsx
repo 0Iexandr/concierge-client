@@ -11,23 +11,23 @@ import events from '../assets/img/events.webp';
 
 const servicesData = {
   cards: {
-    images: [car, dining, yacht, dentist, outfits, flowers, events],
+    images: [dining, car, yacht, flowers, dentist, outfits, events],
     titles: [
-      'Car rental',
       'Restaurants&nightlife',
+      'Car rental',
       'Yachts rentals',
+      'Flowers',
       'Dentist',
       'Designer outfits',
-      'Flowers',
       'Events',
     ],
     descriptions: [
-      'Luxury car rentals',
       'Exclusive dining & nightlife',
+      'Luxury car rentals',
       'Premium yacht charters',
+      'Exclusive flower delivery',
       'Elite dental services',
       'High-end fashion',
-      'Exclusive flower delivery',
       'VIP event access',
     ],
   },
@@ -72,7 +72,7 @@ const Services: FC<ServicesProps> = ({
     >
       <div className="flex justify-between mb-16">
         <h2 className="section__title">SERVICES</h2>
-        <span className="section__title">03</span>
+        <span className="section__title">01</span>
       </div>
       <div className="flex flex-col gap-y-8 items-center">
         <motion.h3

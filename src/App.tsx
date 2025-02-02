@@ -19,14 +19,14 @@ const App = () => {
     <Suspense fallback={<Loader />}>
       <Layout>
         <Hero setIsContactOpen={setIsContactOpen} />
-        <About />
-        <ConciergeTypes setIsContactOpen={setIsContactOpen} />
         <Services
           setSelectedService={setSelectedService}
           setIsContactOpen={setIsContactOpen}
         />
-        <Events setIsContactOpen={setIsContactOpen} />
         <Partners />
+        <ConciergeTypes setIsContactOpen={setIsContactOpen} />
+        <Events setIsContactOpen={setIsContactOpen} />
+        <About />
         <EnquiryForm />
         <ContactModal
           isContactOpen={isContactOpen}

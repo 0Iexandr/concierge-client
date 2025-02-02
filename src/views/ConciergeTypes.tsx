@@ -38,7 +38,7 @@ const ConciergeTypes: FC<ConciergeTypesProps> = ({ setIsContactOpen }) => {
     >
       <div className="flex justify-between mb-16">
         <h2 className="section__title">CONCIERGE TYPES</h2>
-        <span className="section__title">02</span>
+        <span className="section__title">03</span>
       </div>
       <motion.div
         className="flex justify-between md:mb-16 flex-col md:flex-row mb-3 xxl:justify-center xxl:gap-24"

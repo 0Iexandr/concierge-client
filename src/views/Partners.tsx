@@ -44,11 +44,11 @@ const Partners: FC = () => {
   return (
     <section
       className="grain-effect container max-w-none section__padding"
-      id="about"
+      id="partners"
     >
       <div className="flex justify-between mb-16">
         <h2 className="section__title">PARTNERS</h2>
-        <span className="section__title">05</span>
+        <span className="section__title">02</span>
       </div>
       <div className="flex flex-col gap-y-8 items-center">
         <motion.h3

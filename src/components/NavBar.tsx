@@ -14,14 +14,14 @@ const NavBar: FC<NavBarProps> = ({
 }) => {
   const navBarData = {
     items: [
-      'ABOUT',
-      'CONCIERGE TYPES',
       'SERVICES',
+      'CONCIERGE TYPES',
       'EVENTS',
+      'ABOUT',
       'ENQUIRY FORM',
       'CONTACTS',
     ],
-    links: ['#about', '#types', '#services', '#events', '#form', '#contacts'],
+    links: ['#services', '#types', '#events', '#about', '#form', '#contacts'],
   };
 
   const listVariants = {

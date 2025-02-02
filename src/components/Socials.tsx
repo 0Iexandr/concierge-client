@@ -4,7 +4,7 @@ const Socials = () => {
       <div className="flex flex-col gap-y-4">
         <p className="font-inter text-lg opacity-60">Follow us:</p>
         <a
-          href="https://t.me/apexconcierge"
+          href="https://t.me/apexconciergedubai"
           className="font-inter md:text-2xl text-xl break-words"
           target="_blank"
           rel="noreferrer"
@@ -12,7 +12,7 @@ const Socials = () => {
           Telegram
         </a>
         <a
-          href="https://www.instagram.com/apex_concierge"
+          href="https://www.instagram.com/apexconciergedubai"
           className="font-inter md:text-2xl text-xl break-words"
           target="_blank"
           rel="noreferrer"
