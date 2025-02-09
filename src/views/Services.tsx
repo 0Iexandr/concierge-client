@@ -8,10 +8,24 @@ import dentist from '../assets/img/dentist.webp';
 import outfits from '../assets/img/outfits.webp';
 import flowers from '../assets/img/flowers.webp';
 import events from '../assets/img/events.webp';
+import exchange from '../assets/img/exchange.webp';
+import fitness from '../assets/img/fitness.webp';
+import safari from '../assets/img/safari.webp';
 
 const servicesData = {
   cards: {
-    images: [dining, car, yacht, flowers, dentist, outfits, events],
+    images: [
+      dining,
+      car,
+      yacht,
+      flowers,
+      dentist,
+      outfits,
+      events,
+      exchange,
+      fitness,
+      safari,
+    ],
     titles: [
       'Restaurants&nightlife',
       'Car rental',
@@ -20,6 +34,9 @@ const servicesData = {
       'Dentist',
       'Designer outfits',
       'Events',
+      'Currency exchange',
+      'Personal Fitness Training',
+      'Safari',
     ],
     descriptions: [
       'Exclusive dining & nightlife',
@@ -29,6 +46,9 @@ const servicesData = {
       'Elite dental services',
       'High-end fashion',
       'VIP event access',
+      'Secure & Fast Transactions',
+      '(Offline and Online)',
+      'Wild & Unforgettable Adventures',
     ],
   },
 };
@@ -121,7 +141,7 @@ const Services: FC<ServicesProps> = ({
                 {servicesData.cards.titles[idx]}
               </h4>
               <span className="text-main font-playfair text-base sm:text-lg md:text-xl text-start">
-                {`0${idx + 1}`}
+                {idx < 9 ? `0${idx + 1}` : idx + 1}
               </span>
             </div>
             <hr className="w-full border-t-2 border-additionalText m-0 opacity-50" />

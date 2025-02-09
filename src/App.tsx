@@ -18,7 +18,10 @@ const App = () => {
   return (
     <Suspense fallback={<Loader />}>
       <Layout>
-        <Hero setIsContactOpen={setIsContactOpen} />
+        <Hero
+          setIsContactOpen={setIsContactOpen}
+          setSelectedService={setSelectedService}
+        />
         <Services
           setSelectedService={setSelectedService}
           setIsContactOpen={setIsContactOpen}
