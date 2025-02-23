@@ -11,7 +11,7 @@ const EnquiryForm = () => {
     >
       <div className="flex justify-between mb-16">
         <h2 className="section__title">ENQUIRY FORM</h2>
-        <span className="section__title">06</span>
+        <span className="section__title">05</span>
       </div>
       <div className="flex justify-center items-center flex-col md:flex-row lg:gap-24 gap-8">
         <div className="relative">

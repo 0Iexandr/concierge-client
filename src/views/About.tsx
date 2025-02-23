@@ -39,7 +39,7 @@ const About: FC = () => {
     >
       <div className="flex justify-between mb-16">
         <h2 className="section__title">ABOUT</h2>
-        <span className="section__title">05</span>
+        <span className="section__title">01</span>
       </div>
 
       <div className="flex flex-col gap-y-8 items-center">
