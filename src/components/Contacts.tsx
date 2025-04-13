@@ -13,10 +13,10 @@ const Contacts = () => {
       <div className="flex flex-col gap-y-4">
         <p className="font-inter text-lg opacity-60">Phone:</p>
         <a
-          href="tel:+971000000000"
+          href="tel:+971552897977"
           className="font-inter md:text-2xl text-xl break-words"
         >
-          +971 00 000 0000
+          +971552897977
         </a>
       </div>
     </div>

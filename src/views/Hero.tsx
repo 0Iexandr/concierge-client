@@ -11,43 +11,51 @@ import events from '../assets/img/hero/events.jpg';
 import currency from '../assets/img/hero/currency.jpg';
 import fitness from '../assets/img/hero/fitness.jpg';
 import safari from '../assets/img/hero/safari.jpg';
+import jets from '../assets/img/hero/jet.jpg';
+import watches from '../assets/img/hero/watches.jpg';
 
 const heroData = {
   services: [
     'Restaurants&nightlife',
     'Car rental',
     'Yachts rentals',
+    'Private jets',
+    'Luxury watches',
     'Flowers',
     'Dentist',
-    'Designer outfits',
     'Events',
-    'Currency exchange',
     'Personal Fitness Training',
     'Safari',
+    'Currency exchange',
+    'Designer outfits',
   ],
   descriptions: [
     'Exclusive dining & nightlife',
     'Luxury car rentals',
     'Premium yacht charters',
+    'Private air travel with style',
+    'Prestigious timepieces for connoisseurs',
     'Exclusive flower delivery',
     'Elite dental services',
-    'High-end fashion',
-    'VIP event access',
-    'Secure & Fast Transactions',
+    'VIP event organization',
     '(Offline and Online)',
     'Wild & Unforgettable Adventures',
+    'Secure & Fast Transactions',
+    'High-end fashion',
   ],
   images: [
     restaurant,
     car,
     yacht,
+    jets,
+    watches,
     flowers,
     dentist,
-    outfits,
     events,
-    currency,
     fitness,
     safari,
+    currency,
+    outfits,
   ],
 };
 
